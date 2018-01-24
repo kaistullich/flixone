@@ -1,13 +1,16 @@
 import Layout from '../components/Layout/MainLayout'
+import Card from '../components/Layout/Cards'
 import fetch from 'isomorphic-unfetch'
 
 const Index = (props) => (
 	<Layout>
-		<ul>
-			{props.movieDetails.map((movie) => (
-				<li key={movie.id}>{movie.title}</li>
-			))}
-		</ul>
+		{props.movieDetails.map((movie) => (
+			<Card
+				backdrop_path={movie.backdrop_path}
+				title={movie.title}
+				overview={movie.overview}
+			/>
+		))}
 	</Layout>
 )
 
