@@ -1,14 +1,10 @@
-import Head from 'next/head'
 import Jumbotron from './Jumbotron'
 import Navbar from './Navbar'
+import Theme from '../Meta/bs.theme'
 
 const Layout = (props) => (
 	<div className='container'>
-		<Head>
-			<meta charSet='utf-8' />
-			<meta name='viewport' content='initial-scale=1.0, width=device-width' />
-			<link rel='stylesheet' href='../../static/bootstrap.min.css' />
-		</Head>
+		<Theme />
 		<Navbar />
 		<Jumbotron />
 		{props.children}
