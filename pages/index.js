@@ -7,7 +7,7 @@ const Index = (props) => (
 		{props.movieDetails.map((movie) => (
 			<Card
 				key={movie.id}
-				backdrop_path={movie.backdrop_path}
+				backdrop_path={movie.backdrop_path === null ? 'http://samscct.com/wp-content/uploads/2014/09/no-logo.png' : movie.backdrop_path}
 				title={movie.title}
 				overview={movie.overview}
 			/>
