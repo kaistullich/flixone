@@ -1,11 +1,18 @@
 const Card = (props) => (
-
-	<div className="card-deck">
-		<div className="card">
-			<img className="card-img-top" src={`https://image.tmdb.org/t/p/w600${props.backdrop_path}`} alt={props.title} />
-			<div className="card-block">
-				<h4 className="card-title">{props.title}</h4>
-				<p className="card-text">{props.overview}</p>
+	<div className="row">
+		<div className="col s12 m7">
+			<div className="card">
+				<div className="card-image">
+					{console.log(props.backdrop_path)}
+					<img src={props.backdrop_path.includes('no-logo') ? props.backdrop_path: `https://image.tmdb.org/t/p/w500${props.backdrop_path}`} alt={props.title}/>
+						<h5 className="center-align red-text">{props.title}</h5>
+				</div>
+				<div className="card-content">
+					<p>{props.overview}</p>
+				</div>
+				<div className="card-action">
+					<a href="#">This is a link</a>
+				</div>
 			</div>
 		</div>
 	</div>
